@@ -25,6 +25,7 @@ module Writexlsx
       @charts            = [1]
       @zoom_scale_normal = 0
       @page_setup.orientation = false
+      @already_inserted  = false
     end
 
     #
@@ -67,9 +68,13 @@ module Writexlsx
       super(password, options)
     end
     
-    ##### CHART already_inserted? FIX (always false) [by avillagran]
+    ##### CHART already_inserted? FIX [by avillagran]
     def already_inserted?
-      false
+      @already_inserted
+    end
+    
+    def already_inserted=(value)
+      @already_inserted = value
     end
 
     ###############################################################################
