@@ -66,7 +66,11 @@ module Writexlsx
 
       super(password, options)
     end
-
+    
+    ##### CHART already_inserted? FIX (always false) [by avillagran]
+    def already_inserted?
+      false
+    end
 
     ###############################################################################
     #
